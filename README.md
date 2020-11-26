@@ -1,4 +1,5 @@
 # express-app-testing-demo
+[![Coverage Status](https://coveralls.io/repos/github/Hashs7/tp-devops/badge.svg?branch=master)](https://coveralls.io/github/Hashs7/tp-devops?branch=master)
 
 This project is a simple express app for demonstrating testing and code coverage.
 [Jest](https://facebook.github.io/jest/) and
