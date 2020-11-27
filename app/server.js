@@ -1,13 +1,20 @@
 const express = require('express');
 const favicon = require('serve-favicon');
 const path = require('path');
+const dd_options = {
+  'response_code':true,
+  'tags': ['app:my_app']
+}
+const connect_datadog = require('connect-datadog')(dd_options);
 
 const app = express();
+
 
 // public assets
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public/images', 'favicon.ico')));
 app.use('/coverage', express.static(path.join(__dirname, '..', 'coverage')));
+app.use(connect_datadog);
 
 // ejs for view templates
 app.engine('.html', require('ejs').__express);
