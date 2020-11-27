@@ -1,7 +1,6 @@
 const express = require('express');
 const favicon = require('serve-favicon');
 const path = require('path');
-
 const app = express();
 
 // public assets
